@@ -82,6 +82,11 @@ Derivatives CC BY 4.0.
 
 <img alt="original image" src="./Examples/Lenna/Lenna.png" width="200" /> <img alt="particles" src="./Examples/Lenna/Particles/Lenna_particle_frame_25.png" width="200" /> <img alt="mesh" src="./Examples/Lenna/Mesh/Lenna_mesh_frame_25.png" width="200" />
 
-Original "Permission = Use of this 512x512 scan is "overlooked" and by implication permitted by Playboy. Alexander Sawchuk et al scanned the image and cropped it specifically for distribution for use by image compression researchers, and hold no copyright on it." [Wikipedia](https://en.wikipedia.org/wiki/Lenna)
-
+Original "Permission = Use of this 512x512 scan is "overlooked" and by implication permitted by Playboy. Alexander Sawchuk et al scanned the image and cropped it specifically for distribution for use by image compression researchers, and hold no copyright on it." [Wikipedia](https://en.wikipedia.org/wiki/Lenna). 
 Derivatives CC BY 4.0
+
+### Kitten
+
+<img alt="original image" src="./Examples/Kitten/kitten2_sm.png" width="200" /> <img alt="particles" src="./Examples/Kitten/Particles/kitten2_sm_particle_frame_30.png" width="200" /> <img alt="mesh" src="./Examples/Kitten/Mesh/kitten2_sm_mesh_frame_30.png" width="200" />
+
+Original image CC but the authors was not identified. Derivatives CC BY 4.0.

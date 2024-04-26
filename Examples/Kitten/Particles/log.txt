@@ -1,0 +1,7 @@
+num_particles: 24480
+cutoff: 100
+force_factor: 0.1
+total_frames: 30
+particle_size: 0.5
+DPI: 400
+Mesh: False

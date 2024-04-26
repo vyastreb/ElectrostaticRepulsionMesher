@@ -118,13 +118,21 @@ def Heaviside(x):
 
 def main():
     # Parameters
-    num_particles = 30000  
-    cutoff = 20  # Cutoff distance for repulsive forces
+    cutoff = 100  # Cutoff distance for repulsive forces
     force_factor = 0.1
-    total_frames = 25
+    total_frames = 30
     particle_size = 0.5
     DPI = 400
-    Mesh = True
+    Mesh = False
+
+    # Load image and show it
+    img_path = sys.argv[1] 
+    img = load_image(img_path)
+    img.show()
+
+    num_particles = int(img.width * img.height / 3.)
+    print("Number of particles:", num_particles)
+
     # Save parameters in log file
     with open("log.txt", "w") as f:
         f.write(f"num_particles: {num_particles}\n")
@@ -135,11 +143,6 @@ def main():
         f.write(f"DPI: {DPI}\n")
         f.write(f"Mesh: {Mesh}\n")
 
-
-    # Load image and show it
-    img_path = sys.argv[1] 
-    img = load_image(img_path)
-    img.show()
 
     # Initialize particles
     map = np.array(img).transpose()
@@ -176,6 +179,10 @@ def main():
 
     # Initialize plot
     fig, ax = plt.subplots()
+    # For transparent background uncomment these lines
+    # fig.patch.set_alpha(0)
+    # ax.patch.set_alpha(0)
+
     if Mesh:
         # Construct Delaunay triangulation
         NPparticles = np.array([[p[0], p[1]] for p in Pparticles])
@@ -189,7 +196,6 @@ def main():
     ax.set_aspect('equal')
     ax.invert_yaxis()
     ax.axis('off')
-    # fig.savefig(f"{fname}_frame_00.png", bbox_inches='tight', pad_inches=0, dpi=200)
 
     # Create animation
     ani = FuncAnimation(fig, update, frames=total_frames, interval=200, blit=True)    
