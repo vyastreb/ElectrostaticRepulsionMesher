@@ -1,0 +1,5 @@
+num_particles: 15000
+cutoff: 20
+force_factor: 0.1
+total_frames: 25
+Mesh: False
