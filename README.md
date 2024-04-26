@@ -66,9 +66,7 @@ For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.s
 
 ### Skull I
 
-<img alt="original image" src="./Examples/Skull_II/human-skull_levels.png" width="200" /> 
-<img alt="particles" src="./Examples/Skull_II/Particles/human-skull_levels_particle_frame_25.png" width="200" /> 
-<img alt="mesh" src="./Examples/Skull_II/Mesh/human-skull_levels_mesh_frame_25.png" width="200" /> 
+<img alt="original image" src="./Examples/Skull_II/human-skull_levels.png" width="200" /> <img alt="particles" src="./Examples/Skull_II/Particles/human-skull_levels_particle_frame_25.png" width="200" /> <img alt="mesh" src="./Examples/Skull_II/Mesh/human-skull_levels_mesh_frame_25.png" width="200" /> 
 
 Original image from [Look and Learn]( https://www.lookandlearn.com/history-images/YW072217L/Drawing-of-a-human-skull-facing-forwards) distributed under CC BY 4.0 by Joseph Barnard Davis and John Thurnam. 
 Derivatives CC BY 4.0.
