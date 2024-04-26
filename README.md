@@ -70,14 +70,20 @@ For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.s
 <img alt="particles" src="./Examples/Skull_II/Particles/human-skull_levels_particle_frame_25.png" width="200" /> 
 <img alt="mesh" src="./Examples/Skull_II/Mesh/human-skull_levels_mesh_frame_25.png" width="200" /> 
 
-### Woman
+Original image from [Look and Learn]( https://www.lookandlearn.com/history-images/YW072217L/Drawing-of-a-human-skull-facing-forwards) distributed under CC BY 4.0 by Joseph Barnard Davis and John Thurnam. 
+Derivatives CC BY 4.0.
 
-<img alt="original image" src="./Examples/Blonde/woman_blonde.png" width="200" />
-<img alt="particles" src="./Examples/Blonde/Particles/woman_blonde_particle_frame_25.png" width="200" />
-<img alt="mesh" src="./Examples/Blonde/Mesh/woman_blonde_mesh_frame_25.png" width="200" />
+### Tiffany
+
+<img alt="original image" src="./Examples/Blonde/woman_blonde.png" width="200" /> <img alt="particles" src="./Examples/Blonde/Particles/woman_blonde_particle_frame_25.png" width="200" /> <img alt="mesh" src="./Examples/Blonde/Mesh/woman_blonde_mesh_frame_25.png" width="200" />
+
+Original image by [Tiffany](http://78.108.103.11/~fojtik/gallery/gray/woman1.gif), license is unknown, but broadly used in image analysis literature.
+Derivatives CC BY 4.0.
 
 ### Lena
 
-<img alt="original image" src="./Examples/Lenna/Lenna.png" width="200" />
-<img alt="particles" src="./Examples/Lenna/Particles/Lenna_particle_frame_25.png" width="200" />
-<img alt="mesh" src="./Examples/Lenna/Mesh/Lenna_mesh_frame_25.png" width="200" />
+<img alt="original image" src="./Examples/Lenna/Lenna.png" width="200" /> <img alt="particles" src="./Examples/Lenna/Particles/Lenna_particle_frame_25.png" width="200" /> <img alt="mesh" src="./Examples/Lenna/Mesh/Lenna_mesh_frame_25.png" width="200" />
+
+Original "Permission = Use of this 512x512 scan is "overlooked" and by implication permitted by Playboy. Alexander Sawchuk et al scanned the image and cropped it specifically for distribution for use by image compression researchers, and hold no copyright on it." [Wikipedia](https://en.wikipedia.org/wiki/Lenna)
+
+Derivatives CC BY 4.0
