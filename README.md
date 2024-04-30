@@ -80,19 +80,19 @@ Original image from [Look and Learn]( https://www.lookandlearn.com/history-image
 
 + Mesh: initial and final state (CC BY 4)
 
-<img alt="Initial mesh" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_20.png" width="300" />
+<img alt="Initial mesh" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_01.png" width="49%" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_20.png" width="49%" />
 
 See animation of the mesh equilibration in `Examples/Skull_II_v2/skull_mesh_2.mp4`.
 
-<video controls src="Examples/Skull_II_v2/skull_mesh_2.mp4" width = "100%" title="Mesh equilibration animation"></video>
+<!-- <video controls src="Examples/Skull_II_v2/skull_mesh_2.mp4" width = "100%" title="Mesh equilibration animation"></video> -->
 
 + Particles: initial and final state (CC BY 4)
 
-<img alt="Initial particles" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_20.png" width="300" />
+<img alt="Initial particles" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_01.png" width="49%" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_20.png" width="49%" />
 
 See animation of particles' equilibration in `Examples/Skull_II_v2/skull_particles_2.mp4`.
 
-<video controls src="Examples/Skull_II_v2/skull_particles_2.mp4" width = "100%" title="Particles equilibration animation"></video>
+<!-- <video controls src="Examples/Skull_II_v2/skull_particles_2.mp4" width = "100%" title="Particles equilibration animation"></video> -->
 
 ### Kitten
 
@@ -104,11 +104,11 @@ Original image CC but the authors was not identified.
 
 + Mesh: initial and final state (CC BY 4)
 
-<img alt="Initial mesh" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_20.png" width="300" />
+<img alt="Initial mesh" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_01.png" width="49%" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_20.png" width="49%" />
 
 + Particles: initial and final state (CC BY 4)
 
-<img alt="Initial particles" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_20.png" width="300" />
+<img alt="Initial particles" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_01.png" width="49%" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_20.png" width="49%" />
 
 ### Trui
 
@@ -118,11 +118,11 @@ Original image CC but the authors was not identified.
 
 + Mesh: initial and final state
 
-<img alt="Initial mesh" src="./Examples/Trui_v2/trui_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Trui_v2/trui_mesh_frame_20.png" width="300" />
+<img alt="Initial mesh" src="./Examples/Trui_v2/trui_mesh_frame_01.png" width="49%" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Trui_v2/trui_mesh_frame_20.png" width="300" />
 
 + Particles: initial and final state
 
-<img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="300" />
+<img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="49%" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="300" />
 
 
 ---
