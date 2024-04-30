@@ -1,0 +1,14 @@
+num_particles nagative: 15401
+num_particles positive: 38626
+eps_regulation: 0.1
+cutoff: 20
+force_factor: 0.5
+total_frames: 20
+particle_size: 1.25
+zero_probability_offset: 0.02
+DPI: 400
+Mesh: True
+--------------------
+every (should be 1): 1
+charge_threshold (should be 0 to keep white white): 0.0
+factor_charge (should be 1 to keep charge neutral box): 1.0

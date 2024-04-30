@@ -1,0 +1,12 @@
+num_particles nagative: 19012
+num_particles positive: 89129
+factor_charge: 1.0
+every: 1
+eps_regulation: 0.1
+charge_threshold: 0.0
+cutoff: 20
+force_factor: 0.5
+total_frames: 20
+particle_size: 1.25
+DPI: 400
+Mesh: False

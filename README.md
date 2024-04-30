@@ -6,14 +6,17 @@
 + **Author:** Vladislav A. Yastrebov
 + **Afffiliation:** CNRS, MINES Paris - PSL
 + **License:** BSD 3-Clause License
-+ **Date:** April 26, 2024
++ **Date:** April 26-30, 2024
 + **Note:** The code is provided as is and the author is not responsible for any damage caused by the code.
 + **AI usage:** GPT4 and copilot were used to co-construct the code.
 
 ## Description
 
-This is a code that converts grayscale image a set of particles using repulsion algorithm which cluster to darker regions.
-Code based on the particle Electrostatic halftoning [1], but essentially on the details provided on the associated web-page [2]
+This is a code that converts grayscale image a set of particles using repulsion/attraction algorithm (electrostatic interaction).
+Positively charged particles with the charge proportional to the normalized darkness $q\in[0,1]$ of the pixel location are distributed on a regular grid with a random position and are kept fixed. Negatively charged particles $q=-1$ are distributed at pixel locations (in v2, the probability to have a particle is proportional to the level of darkness at the current location).
+We use the gradient descent to make particles clusterize near dark regions thanks to the attractive forces, and in lighter regions thanks to the repulsive forces, the particles distribute rather evenly. Note that only negative particles move and only they are rendered in the output image.
+Particles' location is used to construct Delaunay triangulation, which is used to generate the mesh. The mesh is rendered in the output image if `Mesh = True`.
+Code based on the particle Electrostatic halftoning [1], but essentially on the details provided on the associated web-page [2] with some modifications concerning the gradient descent and the mesh generation.
 
 ## References
 
@@ -31,7 +34,6 @@ Code based on the particle Electrostatic halftoning [1], but essentially on the 
 + Scipy
 + ffmpeg [optional] for frame to video conversion if needed.
 
-
 ## Usage
 
 The code can be run from the command line as follows:
@@ -43,18 +45,20 @@ python Particles_repulsion.py image_name.png
 where `image_name.png` is the path to the image file. 
 All parameters are set in the code itself.
 ```python
-    num_particles = 30000   # Number of particles
-    cutoff = 20             # Cutoff distance for repulsive forces (in pixels of the original image)
-    force_factor = 0.1      # Factor making a link between displacement increment and the acting force
-    total_frames = 25       # Number of computed frames in the output video
-    particle_size = 0.5     # Size of the particles in the output image
+    cutoff = 20             # Cutoff distance for electrostatic forces
+    force_factor = 0.5      # Factor making a link between displacement increment and the acting force
+    total_frames = 20       # Number of computed frames/iterations to stabilize the particles
+    particle_size = 1.25    # Size of the particles in the output image
     DPI = 400               # Resolution of the output image
-    Mesh = True             # If True, the mesh is generated
+    eps_regulation = 0.1    # Regularization parameter to prevent division by zero in force calculation (in pixel size)
+    Mesh = False            # If True, the mesh is generated
+# *Extra parameters for v2*
+    zero_probability_offset = 0. # Offset for the probability to have a particle at a given location; to keep white - white keep it zero, to add some particles at the purely white background this parameter represent the probability (between 0 and 1) to have a particle at white background.
 ```
 
 The code will generate the following files:
 
-+ `log.txt` - log file with the information about the run
++ `log_TIMESTAMP.txt` - log file with the information about the run
 + `image_name_particle_frame_xx.png` - images of the particles if `Mesh = False`, with `xx` being the frame number; `image_name_particle_animation.mp4` - video of the particles' motion if `Mesh = False`;
 + `image_name_mesh_frame_xx.png` - images of the mesh if `Mesh = True`;
 + `image_name_mesh_animation.mp4` - video of the mesh if `Mesh = True`.
@@ -62,7 +66,53 @@ The code will generate the following files:
 For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.sh` script to convert the frames to the video, it is based of `ffmpeg` tool.
 
 
-## Examples
+## Examples 
+
+### Skull I
+
++ Original image
+
+<img alt="original image" src="./Examples/Skull_II/human-skull_levels.png" width="200" />
+
++ Mesh: initial and final state
+
+<img alt="Initial mesh" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_20.png" width="300" />
+
++ Particles: initial and final state
+
+<img alt="Initial particles" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_20.png" width="300" />
+
+### Kitten
+
++ Original image
+
+<img alt="original image" src="./Examples/Kitten/kitten2_sm.png" width="200" />
+
++ Mesh: initial and final state
+
+<img alt="Initial mesh" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 30 iterations" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_30.png" width="300" />
+
++ Particles: initial and final state
+
+<img alt="Initial particles" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 30 iterations" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_30.png" width="300" />
+
+### Trui
+
++ Original image
+
+<img alt="original image" src="./Examples/Trui/trui.png" width="200" />
+
++ Mesh: initial and final state
+
+<img alt="Initial mesh" src="./Examples/Trui_v2/trui_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Trui_v2/trui_mesh_frame_20.png" width="300" />
+
++ Particles: initial and final state
+
+<img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="300" />
+
+## Examples (produced by the obsolete version)
+
+I keep them for their aesthetic value, but they are not representative of the current version of the code.
 
 ### Skull I
 
