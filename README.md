@@ -118,11 +118,11 @@ Original image CC but the authors was not identified.
 
 + Mesh: initial and final state
 
-<img alt="Initial mesh" src="./Examples/Trui_v2/trui_mesh_frame_01.png" width="49%" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Trui_v2/trui_mesh_frame_20.png" width="300" />
+<img alt="Initial mesh" src="./Examples/Trui_v2/trui_mesh_frame_01.png" width="49%" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Trui_v2/trui_mesh_frame_20.png" width="49%" />
 
 + Particles: initial and final state
 
-<img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="49%" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="300" />
+<img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="49%" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="49%" />
 
 
 ---
