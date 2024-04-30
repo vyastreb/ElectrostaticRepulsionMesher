@@ -1,5 +1,5 @@
 
-# Particle Repulsion Mesher
+# Electrostatic-Based Mesher: from image (error estimator) to Delaunay mesh
 
 ## Information
 
@@ -17,6 +17,8 @@ Positively charged particles with the charge proportional to the normalized dark
 We use the gradient descent to make particles clusterize near dark regions thanks to the attractive forces, and in lighter regions thanks to the repulsive forces, the particles distribute rather evenly. Note that only negative particles move and only they are rendered in the output image.
 Particles' location is used to construct Delaunay triangulation, which is used to generate the mesh. The mesh is rendered in the output image if `Mesh = True`.
 Code based on the particle Electrostatic halftoning [1], but essentially on the details provided on the associated web-page [2] with some modifications concerning the gradient descent and the mesh generation.
+
+Version 2 (current one) apart from fast convergence and better control over the particles' distribution, ensures a more accurate follow-up of the image's features.
 
 ## References
 
@@ -68,19 +70,25 @@ For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.s
 
 ## Examples 
 
-### Skull I
+### Skull
 
 + Original image
 
 <img alt="original image" src="./Examples/Skull_II/human-skull_levels.png" width="200" />
 
-+ Mesh: initial and final state
+Original image from [Look and Learn]( https://www.lookandlearn.com/history-images/YW072217L/Drawing-of-a-human-skull-facing-forwards) distributed under CC BY 4.0 by Joseph Barnard Davis and John Thurnam. 
+
++ Mesh: initial and final state (CC BY 4)
 
 <img alt="Initial mesh" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_mesh_frame_20.png" width="300" />
 
-+ Particles: initial and final state
+<video controls src="Examples/Skull_II_v2/skull_mesh_2.mp4" width = "100%" title="Mesh equilibration animation"></video>
+
++ Particles: initial and final state (CC BY 4)
 
 <img alt="Initial particles" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Skull_II_v2/human-skull_levels_particle_frame_20.png" width="300" />
+
+<video controls src="Examples/Skull_II_v2/skull_particles_2.mp4" width = "100%" title="Particles equilibration animation"></video>
 
 ### Kitten
 
@@ -88,13 +96,15 @@ For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.s
 
 <img alt="original image" src="./Examples/Kitten/kitten2_sm.png" width="200" />
 
-+ Mesh: initial and final state
+Original image CC but the authors was not identified.
 
-<img alt="Initial mesh" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 30 iterations" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_30.png" width="300" />
++ Mesh: initial and final state (CC BY 4)
 
-+ Particles: initial and final state
+<img alt="Initial mesh" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_01.png" width="300" /> <img alt="Equilibrated mesh after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_mesh_frame_20.png" width="300" />
 
-<img alt="Initial particles" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 30 iterations" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_30.png" width="300" />
++ Particles: initial and final state (CC BY 4)
+
+<img alt="Initial particles" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Kitten_v2/kitten2_sm_particle_frame_20.png" width="300" />
 
 ### Trui
 
@@ -110,11 +120,16 @@ For more control over the animation one can use `Tools/Convert_frames_to_fmpeg.s
 
 <img alt="Initial particles" src="./Examples/Trui_v2/trui_particle_frame_01.png" width="300" /> <img alt="Equilibrated particles after 20 iterations" src="./Examples/Trui_v2/trui_particle_frame_20.png" width="300" />
 
-## Examples (produced by the obsolete version)
+
+---
+---
+---
+
+## Old Examples (produced by an obsolete version)
 
 I keep them for their aesthetic value, but they are not representative of the current version of the code.
 
-### Skull I
+### Skull
 
 <img alt="original image" src="./Examples/Skull_II/human-skull_levels.png" width="200" /> <img alt="particles" src="./Examples/Skull_II/Particles/human-skull_levels_particle_frame_25.png" width="200" /> <img alt="mesh" src="./Examples/Skull_II/Mesh/human-skull_levels_mesh_frame_25.png" width="200" /> 
 
