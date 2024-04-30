@@ -149,7 +149,7 @@ def main():
     # Additional parameters, normally should be kept as is
     every = 1
     factor_charge           = 1.0
-    zero_probability_offset = 0.02 # To keep white white, set to 0
+    zero_probability_offset = 0.0 # To keep white white, set to 0
     charge_threshold        = 0.0
 
     # Load image and show it
