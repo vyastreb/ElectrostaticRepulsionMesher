@@ -158,4 +158,4 @@ Derivatives CC BY 4.0
 
 <img alt="original image" src="./Examples/Kitten/kitten2_sm.png" width="200" /> <img alt="particles" src="./Examples/Kitten/Particles/kitten2_sm_particle_frame_30.png" width="200" /> <img alt="mesh" src="./Examples/Kitten/Mesh/kitten2_sm_mesh_frame_30.png" width="200" />
 
-Original image CC but the authors was not identified. Derivatives CC BY 4.0.
+Original image CC but the author was not identified. Derivatives CC BY 4.0.
